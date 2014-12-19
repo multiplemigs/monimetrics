@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#return false if weekend
+function criticalDay() {
+	DOTW="$(date +%A)"
+
+	if [ $DOTW == 'Saturday' ] ||
+		 [ $DOTW == 'Sunday' ]
+	then
+		return 1
+	fi
+
+	return 0
+}
+
+hmtail=$(tail -1 /etc/var/log/hostmon.log)
+hm=$(hmtail:0:5)
+date=$(date)
+
+echo $date
