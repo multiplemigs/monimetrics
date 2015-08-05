@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#this is the begining of my bash version of hostmonck.py. still a wip
 #return false if weekend
 function criticalDay() {
 	DOTW="$(date +%A)"
